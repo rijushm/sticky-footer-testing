@@ -108,7 +108,10 @@ function stickyFooter(args){
 	}
 
 	// Maximum window size (px)
-	var window_size = 768; 
+	var window_size = 768;
+	if (args.breakpoint && args.breakpoint > 0) {
+		window_size = args.breakpoint;
+	}
 
 	//Buttons format
 	var callPos, whatsappPos, emailPos, arrPos = [];
@@ -303,8 +306,8 @@ function startFooterStyle1(mql, company_name, desc, call, email, whatsapp, prima
 		    width: '96%',
 		    height: 'auto',
 		    position: 'fixed',
-		    bottom: '1.4rem',
-		    right: '1.4rem',
+		    bottom: '22.4px',
+		    right: '22.4px',
 		    zIndex: '9999',
 		    display: 'flex',
 		    justifyContent: 'flex-end',
@@ -313,14 +316,14 @@ function startFooterStyle1(mql, company_name, desc, call, email, whatsapp, prima
 		}, {
 			// btn styles
 		    maxWidth: '100%',
-		    padding: '0.8rem 1.8rem',
+		    padding: '12.8px 28.8px',
 		    backgroundColor: primary_btn_color,
 		    color: primary_color,
 		    borderRadius: '999px',
 		    boxShadow: '0px 3px 8px rgba(0,0,0,0.16)',
 		    display: 'flex',
 		    alignItems: 'center',
-		    gap: '12px',
+		    gap: '10px',
 		    border: 'none',
 		    outline: 'none',
 		    transition: '0.5s',
@@ -330,7 +333,7 @@ function startFooterStyle1(mql, company_name, desc, call, email, whatsapp, prima
 		    cursor: 'pointer'
 		}, {
 			// btn icon styles
-		    width: '18px',
+		    width: '16px',
 		    height: 'auto',
 		    // filter: 'invert(1)',
 		    position: 'relative',
@@ -338,7 +341,7 @@ function startFooterStyle1(mql, company_name, desc, call, email, whatsapp, prima
 		}, {
 			// btn text styles
 		    fontWeight: '700',
-		    fontSize: '18px',
+		    fontSize: '17px',
 		    position: 'relative',
 		    transition: '0.1s',
 		    zIndex: '2',
@@ -349,7 +352,7 @@ function startFooterStyle1(mql, company_name, desc, call, email, whatsapp, prima
 		    maxWidth: '330px',
 		    padding: '32px 30px',
 		    position: 'absolute',
-		    bottom: 'calc(100% + 1rem)',
+		    bottom: 'calc(100% + 16px)',
 		    right: '0rem',
 		    zIndex: '9999',
 		    display: 'flex',
@@ -357,7 +360,7 @@ function startFooterStyle1(mql, company_name, desc, call, email, whatsapp, prima
 		    alignItems: 'center',
 		    flexDirection: 'column',
 		    backgroundColor: '#ffffff',
-		    borderRadius: '0.8rem',
+		    borderRadius: '12.8',
 		    boxShadow: '0px 3px 8px rgba(0,0,0,0.16)',
 		    transform: 'translateY(250px)',
 		    opacity: '0',
@@ -367,7 +370,7 @@ function startFooterStyle1(mql, company_name, desc, call, email, whatsapp, prima
 		    fontSize: '17px',
 		    fontWeight: '700',
 		    marginTop: '0',
-		    marginBottom: '0.8rem',
+		    marginBottom: '12.8px',
 		    color: '#000000',
 		    textAlign: 'center'
 		}, {
@@ -395,14 +398,14 @@ function startFooterStyle1(mql, company_name, desc, call, email, whatsapp, prima
 		}, {
 			// popup link styles
 		    display: 'flex',
-		    padding: '1rem',
+		    padding: '16px',
 		    borderRadius: '50%',
 		    backgroundColor: '#efefef',
 		    boxShadow: '0px 3px 8px rgba(0,0,0,0.16)',
 		}, {
 			// popup link icon styles
-		    width: '1rem',
-		    height: '1rem',
+		    width: '16px',
+		    height: '16px',
 		    objectFit: 'cover'
 		}, {
 			// popup link styles - whatsapp
@@ -532,7 +535,7 @@ function startFooterStyle1(mql, company_name, desc, call, email, whatsapp, prima
 				anime({
 				  targets: '.sticky__footer_btn',
 				  width: btnHeight,
-				  padding: '1.2rem',
+				  padding: '19.2px',
 				  gap: '0',
 				  duration: 100
 				});
@@ -543,8 +546,8 @@ function startFooterStyle1(mql, company_name, desc, call, email, whatsapp, prima
 				  width: btnWidth+'px',
 				  top: '50%',
 				  // translateY: '50%',
-				  translateX: '50rem',
-				  left: '10rem',
+				  translateX: '800px',
+				  left: '160px',
 				  opacity: 0,
 				  duration: 1000,
 				});
@@ -573,7 +576,7 @@ function startFooterStyle1(mql, company_name, desc, call, email, whatsapp, prima
 				anime({
 				  targets: '.sticky__footer_btn',
 				  width: btnWidth+10,
-				  padding: '0.8rem 1.8rem',
+				  padding: '12.8px 28.8px',
 				  gap: '12px',
 				  duration: 100
 				});
@@ -593,7 +596,7 @@ function startFooterStyle1(mql, company_name, desc, call, email, whatsapp, prima
 				  top: '50%',
 				  // translateY: '0',
 				  translateX: '0',
-				  left: '30rem',
+				  left: '480px',
 				  duration: 100
 				});
 				document.querySelector('.sticky__footer_btn img').setAttribute('src', callIconImg);
@@ -767,7 +770,7 @@ function startFooterStyle2(mql, company_name, call, email, whatsapp, primary_btn
 			// container styles
 		    width: '100%',
 		    height: 'auto',
-		    padding: '0.6rem',
+		    padding: '9.6px',
 		    position: 'fixed',
 		    bottom: '0rem',
 		    right: '0rem',
@@ -787,7 +790,7 @@ function startFooterStyle2(mql, company_name, call, email, whatsapp, primary_btn
 		    alignItems: 'center',
 		    gap: '6px',
 		    boxShadow: '0px 3px 8px rgba(0,0,0,0.18)',
-		    padding: '0.4rem 0.5rem',
+		    padding: '6.4px 8px',
 		    listStyle: 'none'
 		}, {
 			// List Item styles
@@ -797,7 +800,7 @@ function startFooterStyle2(mql, company_name, call, email, whatsapp, primary_btn
 		}, {
 			// List btn styles
 		    width: '100%',
-		    padding: '0.4rem 0.3rem',
+		    padding: '6.4px 4.8px',
 		    backgroundColor: '#d0d0d0',
 		    borderRadius: '999px',
 		    boxShadow: '0px 3px 8px rgba(0,0,0,0.06)',
