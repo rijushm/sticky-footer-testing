@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
+	<title>Sticky Footer 1</title>
+</head>
+<body>
+
+	<main>
+		<section class="section p-6">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+				<div class="col-span-1 h-full rounded-lg overflow-hidden mb-6">
+					<img src="images/article.jpg" alt="car" class="w-full h-full object-cover">
+				</div>
+				<div class="col-span-1 h-full flex justify-center flex-col">
+					<div>
+						<h2 class="text-sm font-semibold mb-4 bg-black text-white px-5 py-1 rounded-full inline-block tracking-widest">CJ&CO</h2>
+					</div>
+					<h1 class="text-4xl xl:text-7xl font-black mb-6 uppercase xl:w-5/6">Mobile Sticky Footer Design</h1>
+					<div class="xl:w-3/4 mb-6 md:mb-12">
+						<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+					</div>
+
+					<div class="flex items-center gap-4">
+						<a href="index.html" class="text-sm inline-block px-5 py-2 bg-black text-white font-semibold uppercase rounded-full">Demo 1</a>
+						<a href="index2.html" class="text-sm inline-block px-5 py-2 bg-gray-100 text-black font-semibold uppercase rounded-full">Demo 2</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- Footer -->
+	<footer class="bg-black py-28 text-white">
+		<div class="w-full flex justify-center items-center flex-col">
+			<p>This is a default footer</p>
+		</div>
+	</footer>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript">
+		stickyFooter({
+			company: "CJ&CO",
+			phone: "1111 222 333",
+			email: "test@test.com",
+			whatsapp: "1111 222 333",
+			effect: 1,
+			color: {
+				primary: "#FFC521",
+				text: "#000000",
+			}
+		});
+	</script>
+</body>
+</html>
